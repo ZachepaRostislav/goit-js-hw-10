@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -17,4 +19,73 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  max-width: 220px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list__item:hover {
+  transform: scale(1.05);
+}
+
+.list__image {
+  flex-basis: 15%;
+  margin-right: 15px;
+}
+
+.country-info {
+  max-width: 200px;
+  padding: 10px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.country-info:hover {
+  transform: scale(1.05);
+}
+
+.country-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.country-flag-wrapper {
+  flex-basis: 33%;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.capital,
+.population,
+.languages {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.text {
+  font-weight: 500;
+  margin-left: 10px;
 }
