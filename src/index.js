@@ -21,7 +21,6 @@ function searchCountry(event) {
   }
   fetchCountries(searchValue)
     .then(data => {
-      console.log(data)
       if (data.length === 1) {
         const markup = countryMarkup(data[0])
         addMarkup(markup, countryInfo)
@@ -31,6 +30,7 @@ function searchCountry(event) {
         const markup = countriesMarkup(data)
         addMarkup(markup, list)
       }
+
       if (data.length > 10) {
         Notify.info("Too many matches found. Please enter a more specific name.");
       };
@@ -42,7 +42,6 @@ function searchCountry(event) {
 
 function countryMarkup(data) {
   const { flags, name, capital, languages, population } = data
-
   return `<div>
             <img src="${flags.svg}" alt="${name.official}"></img>
             <p class="name"><span>${name.common}</span></p>
